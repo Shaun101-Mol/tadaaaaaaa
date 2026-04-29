@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>i ddnt know what to call this part 📸</title>
+<style>
+body {
+    text-align: center;
+    font-family: 'Arial Black', Arial, sans-serif;
+    background: linear-gradient(to right, #ffecd2, #fcb69f, #ffecd2);
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+}
+
+h1 { 
+    margin-top: 40px; 
+    font-size: 56px;
+    font-weight: 900;
+    color: white;
+    text-shadow: 0 0 20px rgba(255, 123, 84, 0.6);
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff7b54;
+    text-shadow: 0 0 10px rgba(255, 123, 84, 0.5);
+    margin: 10px 0 30px 0;
+}
+
+img {
+    width: 300px;
+    border-radius: 25px;
+    margin-top: 30px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.3), 0 0 20px rgba(255, 123, 84, 0.3);
+    border: 4px solid white;
+    transition: all 0.3s;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 123, 84, 0.6);
+}
+
+p {
+    max-width: 700px;
+    margin: 40px auto;
+    font-size: 36px;
+    font-weight: 900;
+    color: white;
+    text-shadow: 0 0 20px rgba(255, 123, 84, 0.6);
+    line-height: 1.6;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn {
+    padding: 18px 35px;
+    margin-top: 20px;
+    margin-right: 15px;
+    border-radius: 25px;
+    border: 3px solid white;
+    background: linear-gradient(135deg, #ff7b54, #ff5c3d);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 0 20px rgba(255, 123, 84, 0.5);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 123, 84, 0.8);
+}
+
+.floating-name {
+    position: fixed;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(255, 123, 84, 0.25);
+    animation: float 14s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-25px) rotate(8deg); }
+}
+
+.floating-name:nth-child(1) { top: 12%; left: 8%; animation-delay: 0s; font-size: 22px; }
+.floating-name:nth-child(2) { top: 40%; right: 6%; animation-delay: 2s; font-size: 20px; }
+.floating-name:nth-child(3) { bottom: 28%; left: 6%; animation-delay: 4s; font-size: 24px; }
+.floating-name:nth-child(4) { bottom: 10%; right: 8%; animation-delay: 6s; font-size: 18px; }
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 36px;
+        margin-top: 20px;
+    }
+    
+    .subtitle {
+        font-size: 20px;
+    }
+    
+    img {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    p {
+        font-size: 24px;
+        margin: 30px 15px;
+    }
+    
+    .btn {
+        padding: 14px 20px;
+        font-size: 16px;
+        max-width: 85%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+    
+    .subtitle {
+        font-size: 18px;
+    }
+    
+    img {
+        width: 100%;
+        max-width: 240px;
+        height: 240px;
+    }
+    
+    p {
+        font-size: 20px;
+        margin: 25px 10px;
+        line-height: 1.4;
+    }
+    
+    .btn {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="floating-name">PENELOPE</div>
+<div class="floating-name">TEMBE</div>
+<div class="floating-name">CUTIE</div>
+<div class="floating-name">ASANDA</div>
+
+<h1>💖What makes you so special?💖</h1>
+<div class="subtitle">Angazi kthi ngiqalephi yaz</div>
+
+<div style="display: flex; align-items: flex-start; justify-content: center; gap: 40px; max-width: 1000px; margin: 30px auto; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 250px;">
+        <p id="messageText" style="max-width: 700px; margin: 40px auto; font-size: 36px; font-weight: 900; color: white; text-shadow: 0 0 20px rgba(255, 123, 84, 0.6); line-height: 1.6; animation: fadeIn 0.5s ease-in;">
+            I knw we havent been talkin a lot lately, but trust me u still mean a lot to me and you always will n to be honest i kinda missed your pretty smile and hugs. 💕
+        </p>
+        
+        <div id="memoryCompliments" style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 20px; margin-top: 20px; margin-left: auto; margin-right: auto; max-width: 600px; display: none; animation: fadeIn 0.5s ease-in;">
+            <p style="font-size: 16px; color: white; margin: 8px 0; line-height: 1.6;">
+                💎 You're genuinely special<br>
+                ✨ Your smile means everything<br>
+                💖 You deserve all the best<br>
+                🌟 Keep being amazing, Asanda
+            </p>
+        </div>
+    </div>
+    
+    <div style="flex: 0 0 auto;">
+        <img id="memoryPhoto" src="photo2.jpg" alt="Asanda's Photo" style="width: 300px; height: 300px; border-radius: 25px; box-shadow: 0 0 30px rgba(0,0,0,0.3), 0 0 20px rgba(255, 123, 84, 0.3); border: 4px solid white; object-fit: cover; display: none; animation: fadeIn 0.5s ease-in;" onerror="document.getElementById('memoryPhoto').style.display='none'; document.querySelector('.photo-error').style.display='block';">
+        <div class="photo-error" style="display: none; color: #ff6b6b; font-size: 16px; margin-top: 10px; background: rgba(255,107,107,0.2); padding: 15px; border-radius: 10px; border: 2px solid #ff6b6b;">
+            📸 Photo not found!<br>Make sure <strong>photo2.jpg</strong> is in the Asanda folder
+        </div>
+    </div>
+</div>
+
+<button class="btn" onclick="changeText()">💭 Reveal More 💭</button>
+<button class="btn" onclick="location.href='index.html'">← Back</button>
+
+<script>
+let messageIndex = 0;
+const messages = [
+    "You have a really pretty smile Asa i wont lie ❤️",
+    "The eyes? i cant even expalain how pretty they look 💖",
+    "I like how you always smile when you see me ✨",
+    "Youre amazing, n i wish everybody could see that 🌟",
+    "I hope you have a great day ahead of you. 💎",
+    "May god bless you with many more years to come. 🙏",
+    "To more good memories n blessings n success 💕"
+];
+
+function changeText() {
+    document.getElementById("messageText").innerText = messages[messageIndex];
+    document.getElementById("memoryPhoto").style.display = "block";
+    document.getElementById("memoryCompliments").style.display = "block";
+    messageIndex = (messageIndex + 1) % messages.length;
+}
+</script>
+
+</body>
+</html>

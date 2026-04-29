@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compliments for Asanda 😊</title>
+<style>
+body {
+    text-align: center;
+    font-family: 'Arial Black', Arial, sans-serif;
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb, #a1c4fd);
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+}
+
+h1 { 
+    margin-top: 40px; 
+    font-size: 56px;
+    font-weight: 900;
+    color: white;
+    text-shadow: 0 0 20px rgba(74, 144, 226, 0.6);
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 28px;
+    font-weight: bold;
+    color: #4a90e2;
+    text-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
+    margin: 10px 0 30px 0;
+}
+
+#text {
+    font-size: 42px;
+    margin-top: 50px;
+    font-weight: 900;
+    color: white;
+    text-shadow: 0 0 20px rgba(74, 144, 226, 0.7), 0 0 40px rgba(74, 144, 226, 0.4);
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.5s ease-in;
+    letter-spacing: 1px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.click-prompt {
+    font-size: 28px;
+    font-weight: bold;
+    color: #4a90e2;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 18px 35px;
+    margin-top: 30px;
+    margin-right: 15px;
+    border-radius: 25px;
+    border: 3px solid white;
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 0 20px rgba(74, 144, 226, 0.5);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(74, 144, 226, 0.8);
+}
+
+.floating-text {
+    position: fixed;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(74, 144, 226, 0.2);
+    animation: float 12s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.floating-text:nth-child(1) { top: 15%; left: 10%; font-size: 20px; animation-delay: 0s; }
+.floating-text:nth-child(2) { top: 35%; right: 8%; font-size: 18px; animation-delay: 2s; }
+.floating-text:nth-child(3) { bottom: 25%; left: 5%; font-size: 22px; animation-delay: 4s; }
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 36px;
+        margin-top: 20px;
+    }
+    
+    .subtitle {
+        font-size: 20px;
+        margin: 15px 0 20px 0;
+    }
+    
+    #text {
+        font-size: 28px;
+        min-height: 80px;
+    }
+    
+    .btn {
+        padding: 14px 20px;
+        font-size: 16px;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+    
+    .subtitle {
+        font-size: 18px;
+    }
+    
+    #text {
+        font-size: 24px;
+        min-height: 70px;
+    }
+    
+    .btn {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="floating-text">Asanda ✨</div>
+<div class="floating-text">Asanda 💙</div>
+<div class="floating-text">Asanda 🌟</div>
+
+<h1>✨ You Deserve This, Asanda! 💙</h1>
+<div class="subtitle">Amazing Compliments Just For You</div>
+
+<div style="display: flex; align-items: flex-start; justify-content: center; gap: 40px; max-width: 1000px; margin: 30px auto; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 250px;">
+        <div id="text" class="click-prompt">👇 Click button below 👇</div>
+        
+        <div id="complimentsList" style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 20px; margin-top: 20px; max-width: 600px; display: none; animation: fadeIn 0.5s ease-in;">
+            <p style="font-size: 16px; color: white; margin: 8px 0; line-height: 1.6;">
+                💎 You're genuinely special and unique<br>
+                ✨ Your presence brightens everyone's day<br>
+                💖 You deserve all the happiness in the world<br>
+                🌟 Never stop being your amazing self
+            </p>
+        </div>
+    </div>
+    
+    <div style="flex: 0 0 auto;">
+        <img id="photoDisplay" src="photo1.jpg" alt="You're Amazing" style="width: 300px; height: 300px; border-radius: 25px; box-shadow: 0 0 40px rgba(74, 144, 226, 0.3); border: 4px solid white; object-fit: cover; display: none; animation: fadeIn 0.5s ease-in;" onerror="document.getElementById('photoDisplay').style.display='none'; document.querySelector('.photo-error').style.display='block';">
+        <div class="photo-error" style="display: none; color: #ff6b6b; font-size: 16px; margin-top: 10px; background: rgba(255,107,107,0.2); padding: 15px; border-radius: 10px; border: 2px solid #ff6b6b;">
+            📸 Photo not found!<br>Make sure <strong>photo1.jpg</strong> is in the Asanda folder
+        </div>
+    </div>
+</div>
+
+<button class="btn" onclick="newText()">✨ Another one 😄</button>
+<button class="btn" onclick="location.href='index.html'">← Back</button>
+
+<script>
+let complimentIndex = 0;
+const compliments = [
+    "You light up every room ✨",
+    "You're genuinely special 💎",
+    "Asanda, you make life better ❤️",
+    "Asanda, you're unforgettable 🌟",
+    "I appreciate you more than you know 💭",
+    "Asanda, you're absolutely incredible ✨",
+    "Your smile is contagious 😊",
+    "Asanda, youre cute 🌟",
+    "Asanda, you're one of a kind 👑",
+];
+
+function newText() {
+    const compliment = compliments[complimentIndex];
+    document.getElementById("text").innerText = compliment;
+    document.getElementById("photoDisplay").style.display = "block";
+    document.getElementById("complimentsList").style.display = "block";
+    complimentIndex = (complimentIndex + 1) % compliments.length;
+}
+</script>
+
+</body>
+</html>

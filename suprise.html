@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surprise suprise for you Asa, but i wouldnt really say a suprise🎁</title>
+<style>
+body {
+    text-align: center;
+    font-family: 'Arial Black', Arial, sans-serif;
+    background: linear-gradient(135deg, #1a0033, #2d0052, #1a0033);
+    color: white;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 40px;
+    font-size: 48px;
+    font-weight: 900;
+    text-shadow: 0 0 20px rgba(255, 20, 147, 0.8), 0 0 40px rgba(138, 43, 226, 0.6);
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff1493;
+    text-shadow: 0 0 10px rgba(255, 20, 147, 0.6);
+    margin: 20px 0;
+}
+
+.click-counter {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background: rgba(255, 20, 147, 0.3);
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 2px solid #ff1493;
+}
+
+.heart {
+    position: absolute;
+    color: red;
+    animation: float 5s linear infinite;
+    font-size: 30px;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh) rotate(0deg); }
+    100% { transform: translateY(-10vh) rotate(360deg); }
+}
+
+.btn {
+    margin-top: 40px;
+    padding: 18px 35px;
+    border-radius: 25px;
+    border: 3px solid white;
+    background: linear-gradient(135deg, #ff1493, #8a2be2);
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 20, 147, 0.8);
+}
+
+.elusive-btn {
+    position: absolute;
+    transition: all 0.15s ease-out;
+    width: 280px;
+    height: 80px;
+    font-size: 20px;
+    animation: buttonPulse 1.5s ease-in-out infinite;
+    cursor: pointer;
+    box-shadow: 0 0 30px rgba(255, 20, 147, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+#backBtn {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    padding: 15px 30px;
+    font-size: 16px;
+}
+
+/* Birthday Overlay */
+.birthday-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+    background-size: 400% 400%;
+    animation: gradientShift 3s ease infinite;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.birthday-overlay.active {
+    display: flex;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.birthday-text {
+    font-size: clamp(42px, 12vw, 120px);
+    font-weight: 900;
+    text-shadow: 
+        -3px -3px 0 #ff00ff,
+        3px -3px 0 #00ffff,
+        -3px 3px 0 #ffff00,
+        3px 3px 0 #ff0080,
+        0 0 50px rgba(255, 0, 255, 0.8),
+        0 0 100px rgba(0, 255, 255, 0.8);
+    animation: popIn 0.8s cubic-bezier(0.36, 0, 0.66, 1);
+    letter-spacing: clamp(1px, 1vw, 4px);
+    text-align: center;
+    padding: 20px;
+    max-width: 95vw;
+    word-wrap: break-word;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.birthday-subtext {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 48px;
+    font-weight: 900;
+    color: white;
+    text-shadow: 
+        -2px -2px 0 #ff00ff,
+        2px -2px 0 #00ffff,
+        -2px 2px 0 #ffff00,
+        2px 2px 0 #ff0080,
+        0 0 30px rgba(255, 255, 255, 0.8);
+    animation: slideUp 1s ease-out 0.3s both;
+    letter-spacing: 2px;
+}
+
+.asanda-name {
+    position: absolute;
+    font-size: 60px;
+    font-weight: 900;
+    color: white;
+    text-shadow: 
+        -2px -2px 0 #ff00ff,
+        2px -2px 0 #00ffff,
+        -2px 2px 0 #ffff00,
+        2px 2px 0 #ff0080,
+        0 0 40px rgba(255, 20, 147, 0.8);
+    animation: float 8s ease-in-out infinite;
+    white-space: nowrap;
+}
+
+.asanda-name:nth-child(2) {
+    top: 20%;
+    left: 10%;
+    animation: float 7s ease-in-out infinite;
+    font-size: 45px;
+}
+
+.asanda-name:nth-child(3) {
+    top: 60%;
+    right: 5%;
+    animation: float 9s ease-in-out infinite;
+    font-size: 55px;
+}
+
+.asanda-name:nth-child(4) {
+    bottom: 15%;
+    left: 5%;
+    animation: float 8.5s ease-in-out infinite;
+    font-size: 50px;
+}
+
+@keyframes popIn {
+    0% { 
+        transform: scaleY(0) rotateX(90deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scaleY(1.1) rotateX(0deg);
+    }
+    100% { 
+        transform: scaleY(1) rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-30px) rotate(5deg); }
+}
+
+.confetti {
+    position: absolute;
+    font-size: 40px;
+    animation: confettiFall 3s ease-in forwards;
+}
+
+@keyframes confettiFall {
+    to {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@keyframes buttonPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 30px rgba(255, 20, 147, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 50px rgba(255, 20, 147, 0.9), inset 0 0 30px rgba(255, 255, 255, 0.2);
+    }
+}
+
+.close-overlay {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.close-overlay:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .click-counter {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+    
+    h1 {
+        font-size: 36px;
+        margin-top: 20px;
+    }
+    
+    .subtitle {
+        font-size: 18px;
+    }
+    
+    .elusive-btn {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+    
+    #backBtn {
+        bottom: 15px;
+        left: 15px;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .click-counter {
+        font-size: 12px;
+        top: 10px;
+        right: 10px;
+        padding: 6px 10px;
+    }
+    
+    h1 {
+        font-size: 26px;
+        margin-top: 15px;
+    }
+    
+    .subtitle {
+        font-size: 14px;
+    }
+    
+    .elusive-btn {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+    
+    #backBtn {
+        bottom: 10px;
+        left: 10px;
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+    
+    .birthday-text {
+        font-size: 60px;
+    }
+    
+    .birthday-subtext {
+        font-size: 24px;
+        bottom: 50px;
+    }
+    
+    .asanda-name {
+        font-size: 36px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="click-counter">Clicks: <span id="clickCount">0</span>/10</div>
+
+<h1>🎉 Asanda, You're Amazing! 🎉</h1>
+<div class="subtitle">A reminder of how special you are</div>
+
+<button class="elusive-btn" id="elusiveBtn">🎁 Catch me if you can! 🎁</button>
+<br><br>
+<button class="btn" id="backBtn" onclick="location.href='index.html'">Back</button>
+
+<div class="birthday-overlay" id="birthdayOverlay">
+    <div class="close-overlay" onclick="closeOverlay()">✕</div>
+    <div class="asanda-name">ASANDA</div>
+    <div class="asanda-name">PENELOPE</div>
+    <div class="asanda-name">TEMBE</div>
+    <div class="asanda-name">TADAAAAAAAAAAAAAAA</div>
+    <div class="birthday-text" id="birthdayMsg">HAPPY BIRTHDAY ASANDA!</div>
+    <div class="birthday-subtext">Enjoy the rest of your day. 💖</div>
+</div>
+
+<script>
+let clickCount = 0;
+const targetClicks = 10;
+const btn = document.getElementById('elusiveBtn');
+const overlay = document.getElementById('birthdayOverlay');
+
+btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    clickCount++;
+    document.getElementById('clickCount').innerText = clickCount;
+    
+    if (clickCount < targetClicks) {
+        // Move button after longer delay so she has time to click again
+        setTimeout(() => {
+            moveButtonCreatively();
+        }, 600);
+        hearts();
+    } else {
+        // Trigger birthday reveal
+        btn.style.display = 'none';
+        showBirthdayReveal();
+    }
+});
+
+// Button only moves after clicking, not on hover (to make it easier to click!)
+// You have 600ms after each click to try clicking again before it moves
+
+function showBirthdayReveal() {
+    overlay.classList.add('active');
+    
+    // Create confetti
+    for (let i = 0; i < 50; i++) {
+        let confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.innerText = ['🎉', '🎊', '🎈', '🎁', '💖', '✨', '⭐'][Math.floor(Math.random() * 7)];
+        confetti.style.left = Math.random() * 100 + '%';
+        confetti.style.top = '-50px';
+        confetti.style.animationDelay = Math.random() * 0.5 + 's';
+        overlay.appendChild(confetti);
+        
+        setTimeout(() => confetti.remove(), 3000);
+    }
+}
+
+function closeOverlay() {
+    overlay.classList.remove('active');
+    btn.style.display = 'block';
+    clickCount = 0;
+    document.getElementById('clickCount').innerText = clickCount;
+    btn.style.left = 'auto';
+    btn.style.top = 'auto';
+    btn.style.animation = 'none';
+}
+
+function hearts() {
+    for (let i = 0; i < 30; i++) {
+        let h = document.createElement("div");
+        h.className = "heart";
+        h.innerText = "❤️";
+        h.style.left = Math.random() * 100 + "vw";
+        h.style.animationDuration = (Math.random() * 3 + 2) + "s";
+        document.body.appendChild(h);
+
+        setTimeout(() => h.remove(), 5000);
+    }
+}
+
+// Creative button movement function - less aggressive moves to make it easier
+function moveButtonCreatively() {
+    const movePatterns = ['random', 'corner', 'slide'];
+    const pattern = movePatterns[Math.floor(Math.random() * movePatterns.length)];
+    
+    switch(pattern) {
+        case 'random':
+            // Jump to random location - but stay within safe zone
+            const randomX = Math.random() * (window.innerWidth - 320);
+            const randomY = Math.random() * (window.innerHeight - 200) + 80;
+            btn.style.left = Math.max(20, randomX) + 'px';
+            btn.style.top = Math.max(80, randomY) + 'px';
+            break;
+            
+        case 'corner':
+            // Jump to corners but with some randomness
+            const corners = [
+                {x: 30, y: 80},
+                {x: window.innerWidth - 320, y: 80},
+                {x: 30, y: window.innerHeight - 160},
+                {x: window.innerWidth - 320, y: window.innerHeight - 160}
+            ];
+            const corner = corners[Math.floor(Math.random() * corners.length)];
+            btn.style.left = corner.x + 'px';
+            btn.style.top = corner.y + 'px';
+            break;
+            
+        case 'slide':
+            // Smooth slide to left or right side
+            const slideX = Math.random() > 0.5 ? 30 : window.innerWidth - 320;
+            const slideY = 80 + Math.random() * (window.innerHeight - 200);
+            btn.style.left = slideX + 'px';
+            btn.style.top = slideY + 'px';
+            break;
+    }
+}
+
+// Position button initially
+window.addEventListener('load', function() {
+    const randomX = Math.random() * (window.innerWidth - 250);
+    const randomY = Math.random() * (window.innerHeight - 150) + 50;
+    btn.style.left = randomX + 'px';
+    btn.style.top = randomY + 'px';
+});
+</script>
+
+</body>
+</html>
